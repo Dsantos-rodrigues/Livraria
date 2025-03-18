@@ -1,0 +1,34 @@
+<div id="menu-header">
+    <h2>Edição de Livros</h2>   
+</div>
+<form id="add-book" action="/atualizarLivro/{{livro.id}}" method="POST">
+    <div id="input-box-form">
+        <input type="text" id="title" name="title" placeholder="Título" value="{{livro.titulo}}" required>
+    </div>
+    <div id="input-box-form">
+        <input type="text" id="author" name="author" placeholder="Autor" value="{{livro.autor}}" required>
+    </div>
+    <div id="input-box-form">
+        <input type="text" id="pub" name="pub" placeholder="Editora" value="{{livro.editora}}" required>
+    </div>
+    <div id="column">
+        <div id="input-box-form">
+            <input type="text" id="genre" name="genre" placeholder="Gênero" value="{{livro.genero}}" required>
+        </div>
+        <div id="input-box-form">
+            <input type="number" id="year" name="year" placeholder="Ano" value="{{livro.anoPublicacao}}" required>
+        </div>
+    </div>
+    <div id="column">
+        <div id="input-box-form">
+            <input type="float" id="price" name="price" placeholder="Preço" value="{{livro.preco}}" required>
+        </div>
+        <div id="disponivel-check">
+            <label>
+                Disponível:
+                <input type="checkbox" id="available" name="available" value="{{livro.disponivel}}">
+            </label>
+        </div>
+    </div>
+    <button type="submit" id="submit-book">Editar Livro</button>
+</form>

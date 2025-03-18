@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Jost:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+#app {
+    width: 800px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #333;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------ LOGIN FORM ------------------*/
+
+#login-form h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#login-header p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: none;
+    margin: 30px 0;
+}
+
+#input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #33333389;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #333;
+    padding: 20px 45px 20px 20px;
+}
+
+#input-box input::placeholder {
+    color: #333;
+}
+
+#input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#submit {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: all .42s ease;
+}
+
+#submit:hover {
+    background: #000000;
+    color: #fff;
+}
+
+#register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+#register-link p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#register-link p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------ REGISTER FORM ------------------*/
+
+#register-form h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#register-header p {
+    text-align: center;
+}
+
+#submit-register {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: all .42s ease;
+}
+
+#submit-register:hover {
+    background: #000000;
+    color: #fff;
+}
+
+#login-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+#login-link p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#login-link p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------ MENU ADICIONAR LIVRO ------------------*/
+
+#menu-header h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#menu-header p {
+    text-align: center;
+}
+
+#add-book {
+    margin-top: 20px; 
+}
+
+#add-book h3 {
+    font-weight: 500;
+    display: flex;
+    text-align: left;
+    text-decoration: underline;
+}
+
+#add-book #input-box-form {
+    width: 100%;
+    margin-top: 4px;
+}
+
+#add-book #input-box-form input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    border: 1px solid #33333389;
+    border-radius: 12px;
+    padding: 0 15px;
+}
+
+#add-book #input-box-form input::placeholder {
+    color: #333;
+}
+
+#disponivel-check{
+    align-self: center;
+    width: 300px;
+}
+
+#disponivel-check input{
+    width: 50px;
+}
+
+#add-book #column {
+    display: flex;
+    column-gap: 15px;
+}
+
+#add-book #submit-book {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: all .42s ease;
+}
+
+#add-book #submit-book:hover {
+    background: #333;
+    color: #fff;}
+
+
+
+
+
+
+
+
+
+
+/*------------------ MENU LIVROS CADASTRADOS ------------------*/
+
+#book-management h3 {
+    font-weight: 500;
+    text-align: left;
+    margin-top: 20px;
+    text-decoration: underline;
+    margin-bottom: 12px;
+}
+
+#book-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+#book-list thead {
+    background: #333;
+    color: #fff;
+}
+
+#book-list thead tr{
+    display: flex;
+    width: 100%;
+}
+
+#book-list th {
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
+#book-list tbody {
+    background: #f2f2f2;
+}
+
+#book-list tbody tr{
+    display: flex;
+    align-items: center;
+    width: 100%; 
+}
+
+#book-list td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+#book-list tr:nth-child(even) {
+    background: #fdfdfd;
+}
+
+.overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.col-1{
+    width: 46px;
+}
+
+.col-2{
+    width: 74px;
+}
+
+.col-3{
+    width: 74px;
+}
+
+.col-4{
+    width: 89px;
+}
+
+.col-5{
+    width: 87px;
+}
+
+.col-6{
+    width: 62px;
+}
+
+.col-7{
+    width: 75px;
+}
+
+.col-8{
+    width: 113px;
+}
+
+.col-9{
+    width: 79px;
+}
+#acoes{
+    overflow: visible;
+    white-space: normal;
+    text-overflow:initial;
+}
+
+td button {
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    margin-top:5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 400;
+    background-color: rgb(86, 122, 253);
+    transition: all 0.2s ease;
+}
+
+#editar {
+    background-color: #58b55ad6;
+}
+
+#editar:hover {
+    background-color: #58b55a;
+}
+
+#excluir {
+    background-color: #d74747ce;
+}
+
+#excluir:hover {
+    background-color: #d74747;
+}
+
+#book-list tfoot {
+    background: rgba(113, 99, 186, 255);
+    font-weight: bold;
+    color: #fff;
+}
+
+#book-list tfoot td {
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*h3 {
+    margin: 0 0 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#book-list, #search-results {
+    margin-top: 20px;
+}
+
+.book-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+*/

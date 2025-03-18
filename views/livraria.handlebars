@@ -1,0 +1,91 @@
+<div id="book-management">
+    <div id="menu-header">
+        <h2>Gestão de Livros</h2>
+        <p>Cadastre, remova, atualize e consulte seu livro.</p>
+    </div>
+    <form id="add-book" action="/cadLivros" method="POST">
+        <h3>Cadastrar Livros</h3>
+        <div id="input-box-form">
+            <input type="text" id="title" name="title" placeholder="Título" required>
+        </div>
+        <div id="input-box-form">
+            <input type="text" id="author" name="author" placeholder="Autor" required>
+        </div>
+        <div id="input-box-form">
+            <input type="text" id="pub" name="pub" placeholder="Editora" required>
+        </div>
+        <div id="column">
+            <div id="input-box-form">
+                <input type="text" id="genre" name="genre" placeholder="Gênero" required>
+            </div>
+            <div id="input-box-form">
+                <input type="number" id="year" name="year" placeholder="Ano" required>
+            </div>
+        </div>
+        <div id="column">
+            <div id="input-box-form">
+                <input type="float" id="price" name="price" placeholder="Preço" required>
+            </div>
+            <div id="disponivel-check">
+                <label>
+                    Disponível:
+                    <input type="checkbox" id="available" name="available">
+                </label>
+            </div>
+        </div>
+        <button type="submit" id="submit-book">Adicionar Livro</button>
+    </form>
+    <h3>Livros Cadastrados</h3>
+    <table id="book-list">
+        <thead>
+            <tr>
+                <th class="col-1">ID</th>
+                <th class="col-2">Título</th>
+                <th class="col-3">Autor</th>
+                <th class="col-4">Gênero</th>
+                <th class="col-5">Editora</th>
+                <th class="col-6">Ano</th>
+                <th class="col-7">Preço</th>
+                <th class="col-8">Disponível</th>
+                <th class="col-9">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas de livros serão adicionadas aqui -->
+            {{#each livros}}
+            <tr>
+                <td class="col-1 overflow" title="{{id}}">{{id}}</td>
+                <td class="col-2 overflow" title="{{titulo}}">{{titulo}}</td>
+                <td class="col-3 overflow" title="{{autor}}">{{autor}}</td>
+                <td class="col-4 overflow" title="{{genero}}">{{genero}}</td>
+                <td class="col-5 overflow" title="{{editora}}">{{editora}}</td>
+                <td class="col-6 " title="{{anoPublicacao}}">{{anoPublicacao}}</td>
+                <td class="col-7 overflow" title="{{preco}}">R${{preco}}</td>
+                <td class="col-8 overflow" title="{{disponivel}}">{{disponivel}}</td>
+                <td class="col-9">
+                    <a href="/editarLivro/{{id}}"><button id="editar">Editar</button></a>
+                    <form action="/deletarLivro/{{id}}" method="POST" style="display:inline;">
+                        <button id="excluir" type="submit" onclick="return confirm('Tem certeza que deseja deletar este livro?');">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <h3>Buscar Livro</h3>
+    <form action="/buscarLivros" method="GET">
+        <input type="text" name="q" id="search" placeholder="Buscar por qualquer dado" required>
+        <button type="submit" id="search-button">Buscar</button>
+    </form>
+    <form action="/logout">
+        <button id="logout">Logout</button>
+    </form>
+</div>
+<script>
+    window.onload = function () {
+        const message = "{{{message}}}";
+        if (message) {
+            alert(message);
+        }
+    };
+</script>

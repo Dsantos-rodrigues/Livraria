@@ -1,0 +1,31 @@
+<div id="register-form">
+    <div id="register-header">
+        <h2>Cadastro</h2>
+        <p>Simples e rápido!!!</p>
+    </div>
+
+    <form id="register" action="/cadastrar" method="POST">
+        <div id="input-box">
+            <input type="text" id="new-username" name="newUsername" placeholder="Usuário" required><i class='bx bxs-user'></i>
+        </div>
+        <div id="input-box">
+            <input type="password" id="new-password" name="newPassword" placeholder="Senha" required><i class='bx bxs-lock-alt'></i>
+        </div>
+        <div id="input-box">
+            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirmar Senha" required><i
+                class='bx bxs-lock-alt'></i>
+        </div>
+        <button type="submit" id="submit-register">Cadastrar</button>
+    </form>
+    <div id="login-link">
+        <p>Já tem uma conta? <a id="show-login" href="./">Login</a></p>
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        const message = "{{{message}}}";
+        if (message) {
+            alert(message);
+        }
+    };
+</script>

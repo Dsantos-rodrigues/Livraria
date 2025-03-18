@@ -1,0 +1,30 @@
+<div id="login-form">
+    <div id="login-header">
+        <h2>Login</h2>
+        <p id="welcome">Olá, bem-vindo de volta</p>
+    </div>
+
+
+    <form id="login" action="/logar" method="POST">
+        <div id="input-box">
+            <input type="text" id="username" name="username" placeholder="Usuário" required><i class='bx bxs-user'></i>
+        </div>
+        <div id="input-box">
+            <input type="password" id="password" name="password" placeholder="Senha" required><i class='bx bxs-lock-alt'></i>
+        </div>
+        <button type="submit" id="submit">Login</button>
+    </form>
+
+    <div id="register-link">
+        <p>Não tem uma conta? <a id="show-register" href="./cadastro">Cadastre-se</a></p>
+        <!--<button id="show-register">Registrar-se</button>-->
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        const message = "{{{message}}}";
+        if (message) {
+            alert(message);
+        }
+    };
+</script>
